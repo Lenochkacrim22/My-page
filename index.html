@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- НАСТРОЙКИ ЦВЕТОВ И БАЗЫ (ОБНОВЛЕНО ПОД ФОТО) --- */
+        /* --- НАСТРОЙКИ ЦВЕТОВ И БАЗЫ --- */
         :root {
             --primary: #9B59B6; /* Глубокий фиолетовый */
             --accent: #1ABC9C;  /* Яркий бирюзовый (cyan) */
@@ -32,8 +32,8 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3 { font-family: 'Fredoka', sans-serif; color: var(--accent); } /* Заголовки бирюзовые */
-        h2.section-title, footer h2.section-title { color: var(--white); } /* Заголовки на темном фоне белые */
+        h1, h2, h3 { font-family: 'Fredoka', sans-serif; color: var(--accent); }
+        h2.section-title, footer h2.section-title { color: var(--white); }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
@@ -41,7 +41,7 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background-color: var(--accent); /* Бирюзовая кнопка */
+            background-color: var(--accent);
             color: var(--white);
             font-weight: 700;
             text-decoration: none;
@@ -54,14 +54,14 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            background-color: #48C9B0; /* Светлее бирюзовый */
+            background-color: #48C9B0;
             box-shadow: 0 6px 20px rgba(26, 188, 156, 0.6);
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--accent); /* Бирюзовая обводка */
-            color: var(--accent); /* Бирюзовый текст */
+            border: 2px solid var(--accent);
+            color: var(--accent);
             box-shadow: none;
         }
 
@@ -72,7 +72,7 @@
 
         /* --- ГЕРОЙ --- */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #6C3D8F 100%); /* Фиолетовый градиент */
+            background: linear-gradient(135deg, var(--primary) 0%, #6C3D8F 100%);
             padding: 100px 0 80px;
             color: var(--white);
             border-bottom-left-radius: 50px;
@@ -92,8 +92,17 @@
         .hero-text h1 {
             font-size: 3.5rem;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 5px; /* Уменьшил отступ после h1 */
             color: var(--white);
+        }
+
+        .hero-text .name {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent); /* Бирюзовое имя */
+            margin-bottom: 20px; /* Отступ перед описанием */
+            display: block;
         }
 
         .hero-text p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
@@ -105,7 +114,7 @@
             height: 350px;
             border-radius: 50%;
             background-color: var(--white);
-            border: 8px solid var(--accent); /* Бирюзовая рамка */
+            border: 8px solid var(--accent);
             overflow: hidden;
             background-image: url('https://www.dropbox.com/scl/fi/8fh08g14chp9g2jncpc2t/IMG_20251124_130918.png?rlkey=iktjfrc7fetud1toome697boq&st=t661i2i6&raw=1');
             background-size: cover;
@@ -129,24 +138,24 @@
         }
 
         .stat-card {
-            background: var(--light-bg); /* Светлее фиолетовый для карточек */
+            background: var(--light-bg);
             padding: 20px 40px;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             min-width: 200px;
-            color: var(--white); /* Белый текст на темной карточке */
+            color: var(--white);
         }
 
         .stat-number {
             display: block;
             font-size: 2.5rem;
             font-family: 'Fredoka', sans-serif;
-            color: var(--accent); /* Бирюзовые числа */
+            color: var(--accent);
             font-weight: 600;
         }
 
-        .stat-label { font-size: 1rem; color: #BBB; } /* Светлый серый для подписей */
+        .stat-label { font-size: 1rem; color: #BBB; }
 
         /* --- ОТЗЫВЫ (КАРУСЕЛЬ) --- */
         .reviews-section { padding: 60px 0 20px; }
@@ -165,18 +174,18 @@
 
         .review-card {
             flex: 0 0 300px; 
-            background: var(--light-bg); /* Светлее фиолетовый */
+            background: var(--light-bg);
             padding: 25px;
             border-radius: 20px;
             scroll-snap-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid var(--accent); /* Бирюзовая полоса */
-            color: var(--text); /* Светлый текст */
+            border-left: 5px solid var(--accent);
+            color: var(--text);
         }
 
         .review-author {
             font-weight: bold;
-            color: var(--secondary); /* Синий/голубой для автора */
+            color: var(--secondary);
             margin-top: 15px;
             display: block;
             font-size: 0.9rem;
@@ -184,7 +193,7 @@
 
         .review-child {
             font-size: 0.8rem;
-            color: #999; /* Светлый серый */
+            color: #999;
         }
 
         /* --- ПРЕИМУЩЕСТВА --- */
@@ -193,35 +202,35 @@
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
         .feature-card {
-            background: var(--light-bg); /* Светлее фиолетовый */
+            background: var(--light-bg);
             padding: 30px;
             border-radius: 20px;
             transition: 0.3s;
-            border-bottom: 5px solid var(--secondary); /* Синяя полоса */
-            color: var(--text); /* Светлый текст */
+            border-bottom: 5px solid var(--secondary);
+            color: var(--text);
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(155, 89, 182, 0.15); /* Фиолетовая тень */
+            box-shadow: 0 15px 30px rgba(155, 89, 182, 0.15);
         }
 
-        .icon { font-size: 3rem; margin-bottom: 20px; display: block; color: var(--accent); } /* Бирюзовые иконки */
+        .icon { font-size: 3rem; margin-bottom: 20px; display: block; color: var(--accent); }
 
         /* --- КВАЛИФИКАЦИЯ (НОВЫЙ ВИД) --- */
         .certs {
-            background-color: var(--light-bg); /* Светлее фиолетовый */
+            background-color: var(--light-bg);
             padding: 60px 0;
             text-align: center;
             border-radius: 30px;
             margin-bottom: 80px;
-            color: var(--text); /* Светлый текст */
+            color: var(--text);
         }
 
         .qual-text {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--secondary); /* Синий/голубой текст */
+            color: var(--secondary);
             margin: 20px 0 30px;
         }
 
@@ -239,7 +248,7 @@
         .social-btn {
             width: 60px;
             height: 60px;
-            background: var(--primary); /* Основной фиолетовый */
+            background: var(--primary);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -251,8 +260,8 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        .social-btn.tg { background: #3498DB; } /* Синий телеграм */
-        .social-btn.email { background: #E74C3C; } /* Красный для почты */
+        .social-btn.tg { background: #3498DB; }
+        .social-btn.email { background: #E74C3C; }
 
         .social-btn:hover { transform: scale(1.1); }
 
@@ -276,6 +285,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>English Super Power <br>для детей и подростков</h1>
+                    <span class="name">Чистякова Елена Олеговна</span>
                     <p>Уроки, на которых не скучно. Методика, которая работает. Педагог, который понимает.</p>
                     <a href="#contact" class="btn">Связаться со мной</a>
                 </div>
